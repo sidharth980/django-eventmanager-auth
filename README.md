@@ -1,1 +1,1 @@
-# Event Management Site using Django
+# Event Management using Django
