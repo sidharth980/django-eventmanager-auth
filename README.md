@@ -1,1 +1,1 @@
-# django-eventmanager-auth
+# Event Management Site using Django
