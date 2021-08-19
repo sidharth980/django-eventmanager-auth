@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{ static 'images/gb.png' }">
+    <title>Event Page</title>
+</head>
+<body>
+    <h1>Welcome back {{request.user}}</h1>
+    <h2>Events</h2>
+    {%  for x in lis %}
+    <ol>
+        <!-- <dt>{{x.eventName}}</dt>
+        <dt>{{x.eventTime}}</dt>
+        <dt>{{x.about}}</dt> -->
+
+    
+    <h1>{{x.eventName}}</h1>
+    <h2>{{x.eventTime}}</h2>
+    <h3>{{x.about}}</h3>
+    </ol>   
+    {% endfor %}
+</body>
+</html>

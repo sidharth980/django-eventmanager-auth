@@ -1,4 +1,4 @@
-"""eventmanage URL Configuration
+"""eventmanager URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
@@ -15,7 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import include
+from user.views import loginView,mainPageView
+from event.views import eventPage
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('account/',include("django.contrib.auth.urls")),
+    path('',mainPageView,name = 'mainPage'),
+    path('eventpage/',eventPage)
 ]
